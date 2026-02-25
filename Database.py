@@ -1,21 +1,23 @@
 from imports import *
 
-from datetime import datetime
-
 class Database:
     def __init__(self):
         self.connect()
-        #create userInfo table if not existing
+        #creates tables if not existing
         try:
-            self.execute('''CREATE TABLE Users (uid text primary key, name text, age integer, last_log datetime)''')
+            self.execute('''CREATE TABLE Users (username text NOT NULL, firstname text, lastname text, age integer, PRIMARY KEY(username))''')
+            self.execute('''CREATE TABLE Log (username text NOT NULL, login_date datetime NOT NULL, chat_length datetime, PRIMARY KEY(username, login_date), FOREIGN KEY(username) REFERENCES Users(username))''')
+            self.execute('''CREATE INDEX recent_logins ON Log(login_date DESC)''')
         except:
             pass
 
     def connect(self):
-        self.connection = sqlite3.connect("data.db")
+        self.connection = sqlite3.connect("user_data.db")
         self.cursor = self.connection.cursor()
+        self.cursor.execute("PRAGMA foreign_keys = ON;")
 
-    def disconnect(self):
+    def disconnect(self, username):
+        self.execute(f'''UPDATE Log SET chat_length = timediff(CURRENT_TIMESTAMP, login_date) WHERE chat_length IS NULL AND username = ?''',(username,))
         self.connection.close()
 
     def execute(self, query, parameter=None):
@@ -24,47 +26,49 @@ class Database:
         else: self.cursor.execute(query,parameter)
         self.connection.commit()
 
-    def fetch(self,query,parameter=None):
-        self.execute(query, parameter)
-        return self.cursor.fetchone()
+    def new_user(self, username):
+        self.execute(f'''SELECT * FROM Users WHERE username = ?;''',(username,))
+        if self.cursor.fetchone():
+            suggestion = self.gen_username(username)
+            return suggestion, "Username already exists, try " + suggestion
+        self.execute(f'''INSERT INTO Users (username) VALUES (?);''',(username,))
+        self.execute(f'''INSERT INTO Log (username, login_date) VALUES (?, CURRENT_TIMESTAMP);''',(username,))
+        return username, None
     
-    def get_info(self,uid,object):
-        query=f'''SELECT {object} from Users WHERE uid = ?'''
-        self.execute(query, (uid, ))
-        return self.cursor.fetchone()[0]
-
-    def set_info(self, uid,object,info):
-        query=f'''UPDATE Users SET {object} = ? WHERE uid = ?'''
-        self.execute(query, (info, uid))
+    def set_info(self, username, objects, info):
+        columns = ", ".join(f"{o} = ?" for o in objects)
+        query=f'''UPDATE Users SET {columns} WHERE username = ?'''
+        self.execute(query, (*info, username))
         return True
-
-    def set_user(self):
-        now = datetime.now()
-        user = self.fetch(f'''SELECT * FROM Users ORDER BY last_log DESC LIMIT 1;''')
-        if not user:
-            first = True
-            uid,name = self.new_user()
-        else:
-            uid,name = self.fetch(f'''SELECT uid, name FROM Users ORDER BY last_log DESC LIMIT 1;''')
-            first = False
-        return uid,name, first
     
-    def new_user(self):
-        now = datetime.now()
-        uid = self.gen_username()
-        exists = self.fetch(f'''SELECT * FROM Users WHERE uid = ?;''',(uid,))
-        while exists: #unique username
-            uid = self.gen_username()
-            exists = self.fetch(f'''SELECT * FROM Users WHERE uid = ?;''',(uid,))
-        self.execute(f'''INSERT INTO Users (uid, last_log) VALUES (?,?);''',(uid,now))
-        return uid,None
+    def get_info(self, username, objects, table="Users"):
+        columns = ", ".join(objects)
+        query=f'''SELECT {columns} from {table} WHERE username = ?'''
+        self.execute(query, (username, ))
+        return self.cursor.fetchall()
 
-    def login(self,uid):
-        uid, name = self.fetch(f'''SELECT uid, name FROM Users WHERE uid = ?;''',(uid,))
-        if uid:
-            self.set_info(uid, 'last_log', datetime.now())
-        return uid,name
+    def exists(self, username):
+        self.execute(f'''SELECT * FROM Users WHERE username = ?;''',(username,))
+        return True if self.cursor.fetchone() is not None else False
+
+    def login(self,username):
+        if self.exists(username):
+            self.execute(f'''INSERT INTO Log (username, login_date) VALUES (?, CURRENT_TIMESTAMP);''',(username,))
+            name = self.get_info(username, ["firstname"])[0][0]
+            return name if name else username
+        return "Username does not exist, please create an account"
     
-    def gen_username(self):
-        characters = string.ascii_letters + string.digits
-        return ''.join(rnd.choices(characters, k=7))
+    def gen_username(self, base):
+        while self.exists(base):
+            characters = string.ascii_letters + string.digits
+            base += characters[rnd.randint(0,len(characters)-1)]
+        return base
+    
+    def last_user(self):
+        self.execute('''SELECT username FROM Log LIMIT 1''')
+        username = self.cursor.fetchone()[0]
+        if username:
+            self.execute(f'''SELECT firstname FROM Users WHERE username = ?''',(username,))
+            name = self.cursor.fetchone()[0]
+            return username, name if name else None
+        return None, None
