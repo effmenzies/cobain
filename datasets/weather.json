@@ -1,0 +1,772 @@
+{
+    "locations": [
+        {
+            "location": "London",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Manchester",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.4,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Birmingham",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Leeds",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Glasgow",
+            "weather": {
+                "temperature": 0,
+                "precip": 0.6,
+                "feelslike": -1
+            }
+        },
+        {
+            "location": "Sheffield",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.8,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Liverpool",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Edinburgh",
+            "weather": {
+                "temperature": 4,
+                "precip": 1.0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Bristol",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Cardiff",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Leicester",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Coventry",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Nottingham",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.6,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Newcastle Upon Tyne",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.2,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Southampton",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Reading",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Portsmouth",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Brighton",
+            "weather": {
+                "temperature": 7,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Plymouth",
+            "weather": {
+                "temperature": 7,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Derby",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.8,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Stoke-On-Trent",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Wolverhampton",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.3,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Aberdeen",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.5,
+                "feelslike": 6
+            }
+        },
+        {
+            "location": "Norwich",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Swansea",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "Oxford",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.3,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Cambridge",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.3,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "York",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Bath",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Exeter",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.9,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Luton",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "Milton Keynes",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Sunderland",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Peterborough",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Ipswich",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Dundee",
+            "weather": {
+                "temperature": 3,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Worcester",
+            "weather": {
+                "temperature": 2,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Chester",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.7,
+                "feelslike": 6
+            }
+        },
+        {
+            "location": "Carlisle",
+            "weather": {
+                "temperature": 4,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Chelmsford",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Canterbury",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Gloucester",
+            "weather": {
+                "temperature": 7,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Durham",
+            "weather": {
+                "temperature": 19,
+                "precip": 0.2,
+                "feelslike": 19
+            }
+        },
+        {
+            "location": "Newport",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "Wrexham",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Bangor",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Inverness",
+            "weather": {
+                "temperature": 2,
+                "precip": 0.9,
+                "feelslike": 0
+            }
+        },
+        {
+            "location": "Stirling",
+            "weather": {
+                "temperature": -1,
+                "precip": 0,
+                "feelslike": -2
+            }
+        },
+        {
+            "location": "Perth",
+            "weather": {
+                "temperature": 28,
+                "precip": 0.7,
+                "feelslike": 31
+            }
+        },
+        {
+            "location": "Middlesbrough",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Bolton",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Blackpool",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.4,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Bournemouth",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Bradford",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.6,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Huddersfield",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.6,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Wakefield",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.5,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Telford",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Slough",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Basildon",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Derry",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.2,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Lisburn",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Newry",
+            "weather": {
+                "temperature": 4,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Colchester",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.6,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Hastings",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Eastbourne",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.2,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Northampton",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.8,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Swindon",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.2,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Stevenage",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.5,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "Maidstone",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.3,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "Hemel Hempstead",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.9,
+                "feelslike": 1
+            }
+        },
+        {
+            "location": "High Wycombe",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Wokingham",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Guildford",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Epsom",
+            "weather": {
+                "temperature": 2,
+                "precip": 0,
+                "feelslike": 0
+            }
+        },
+        {
+            "location": "Ashford",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.4,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Folkestone",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.4,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Margate",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.4,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Rochester",
+            "weather": {
+                "temperature": 7,
+                "precip": 0,
+                "feelslike": 7
+            }
+        },
+        {
+            "location": "Basingstoke",
+            "weather": {
+                "temperature": 5,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Aylesbury",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 2
+            }
+        },
+        {
+            "location": "Banbury",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.3,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Harlow",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.3,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Grimsby",
+            "weather": {
+                "temperature": 7,
+                "precip": 0.3,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Scunthorpe",
+            "weather": {
+                "temperature": 7,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Worksop",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Hartlepool",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Stockton-On-Tees",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Darlington",
+            "weather": {
+                "temperature": 6,
+                "precip": 0.2,
+                "feelslike": 6
+            }
+        },
+        {
+            "location": "Barrow-In-Furness",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 6
+            }
+        },
+        {
+            "location": "Blackburn",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 4
+            }
+        },
+        {
+            "location": "Burnley",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.4,
+                "feelslike": 3
+            }
+        },
+        {
+            "location": "Preston",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Lancaster",
+            "weather": {
+                "temperature": -3,
+                "precip": 0.4,
+                "feelslike": -5
+            }
+        },
+        {
+            "location": "Morecambe",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 6
+            }
+        },
+        {
+            "location": "Southport",
+            "weather": {
+                "temperature": 6,
+                "precip": 0,
+                "feelslike": 5
+            }
+        },
+        {
+            "location": "Wigan",
+            "weather": {
+                "temperature": 5,
+                "precip": 0.2,
+                "feelslike": 4
+            }
+        }
+    ]
+}

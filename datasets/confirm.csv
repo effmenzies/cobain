@@ -1,0 +1,33 @@
+Utterance,Intent
+yes,yes
+yep,yes
+y,yes
+ok,yes
+sure,yes
+fine,yes
+yep,yes
+yeah,yes
+okay,yes
+perfect,yes
+absolutely,yes
+definitely,yes
+correct,yes
+true,yes
+right,yes
+agree,yes
+affirmative,yes
+no,no
+nope,no
+not,no
+disagree,no
+don't agree,no
+incorrect,no
+wrong,no
+not right,no
+false,no
+nah,no
+never,no
+not,no
+n,no
+negative,no
+n't,no

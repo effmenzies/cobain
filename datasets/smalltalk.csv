@@ -1,0 +1,133 @@
+Utterance,Intent
+what is your name,name
+what's your name,name
+tell me your name,name
+what are you called,name
+what is my name,name
+what am i called,name
+do you know my name,name
+tell me my name,name
+what do you go by,name
+what's your identity,name
+what should i call you,name
+do you have name,name
+can you tell me your name,name
+may i know your name,name
+do you remember my name,name
+remind me of my name,name
+what's my name again,name
+what am i called,name
+what do you call me,name
+what do i go by,name
+how old are you,age
+how old am i,age
+what is my age,age
+when is my birthday,age
+when was i born,age
+tell me my age,age
+tell me how old i am,age
+do you know how old i am,age
+do you know my birthdate,age
+when's my birthday,age
+do you know my age,age
+can i know your age,age
+do you have an age,age
+how long have you been alive,age
+when were you created,age
+do you know how old i am,age
+can i know how old you are,age
+may you tell me your age,age
+may i know your age,age
+how old or young are you,age
+who am i talking to,name
+can i know your name,name
+may you tell me your name,name
+how are you named,name
+how am i named,name
+who am i chatting with,name
+who am i,name
+how long have i been alive,age
+what age do i have,age
+what's my birthdate,age
+what's your birthdate,age
+how are you,qanda
+how is your day going,qanda
+are you ok,qanda
+are you alright,qanda
+how are things,qanda
+how's it going,qanda
+how are you doing,qanda
+how's life,qanda
+are you good,qanda
+what are you,qanda
+are you real,qanda
+who are you,qanda
+are you a chatbot,qanda
+are you a robot,qanda
+are you human,qanda
+who made you,qanda
+what's up,qanda
+are you doing well,qanda
+are you having a good day,qanda
+are you feeling ok,qanda
+how have you been doing,qanda
+how's life,qanda
+how are you feeling,qanda
+are you doing alright,qanda
+how are you doing today,qanda
+how is life going,qanda
+what are you up to,qanda
+which day is it today,datetime
+what's the time,datetime
+what time is it,datetime
+can you tell me the time,datetime
+may i inquire the time,datetime
+what does the clock say,datetime
+could you read the time,datetime
+do you have the full date,datetime
+what day is it today,datetime
+what day of the week is it,datetime
+do you know the time,datetime
+what's the o'clock,datetime
+what do the hands say,datetime
+what month is it,datetime
+what year is it,datetime
+what is the time,datetime
+do you know what the time is,datetime
+may you tell me the time,datetime
+do you want to tell me today's date,datetime
+what's the date,datetime
+can you let me know the time,datetime
+what's the hands saying,datetime
+can you tell me the time right now,datetime
+what date is it today,datetime
+what is today's date,datetime
+what's the weather like,weather
+what's today's forecast,weather
+what are the current weather conditions,weather
+what are the conditions like outside,weather
+what is the weather like in,weather
+what is the weather saying right now,weather
+what are the skies saying,weather
+are the skies going to be clear,weather
+what's the temperature,weather
+what's the weather going to be like today,weather
+what will the temperature be like today,weather
+what is the weather like right now,weather
+is it warm outside,weather
+should i take a coat with me,weather
+will i need a jumper,weather
+will i need warm clothes,weather
+will i need an umbrella,weather
+is it going to rain,weather
+can you tell me if it's raining,weather
+do i need an umbrella,weather
+how is the weather,weather
+am i going to need a jacket,weather
+am i going to need an umbrella,weather
+should i bring an umbrella,weather
+should i bring a coat,weather
+is it going to rain in the next few hours,weather
+will it be sunny outside,weather
+how's the weather in,weather
+what is the weather like in,weather

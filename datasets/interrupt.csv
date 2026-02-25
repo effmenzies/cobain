@@ -1,0 +1,32 @@
+Utterance,Intent
+bye,goodbye
+goodbye,goodbye
+see you,goodbye
+adios,goodbye
+got to go,goodbye
+i'm going,goodbye
+i have to go,goodbye
+i'm off,goodbye
+see you later,goodbye
+goodnight,goodbye
+night,goodbye
+i'm leaving,goodbye
+i am going to leave,goodbye
+exit the chat,goodbye
+abort this chat,goodbye
+end chat,goodbye
+what can you do,discover
+how can you help me,discover
+can you help me,discover
+what are the options,discover
+what tasks can you do,discover
+suggest something,discover
+do you have suggestions,discover
+your abilities,discover
+your capabilities,discover
+your scope,discover
+your abilities,discover
+help me,discover
+help,discover
+what do you mean,discover
+what is it,discover

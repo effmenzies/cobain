@@ -1,0 +1,138 @@
+Utterance,Intent
+hello,greeting
+hello friend,greeting
+hello again,greeting
+hi there,greeting
+hi,greeting
+hiya,greeting
+howdy,greeting
+morning,greeting
+afternoon,greeting
+evening,greeting
+hey,greeting
+good day,greeting
+hey there,greeting
+greetings,greeting
+bonjour,greeting
+bonjourno,greeting
+hello there,greeting
+hiya amigo,greeting
+greetings and salutations,greeting
+what can you do for me,smalltalk
+what are your abilities,smalltalk
+what are your functions,smalltalk
+how can you help me,smalltalk
+help me,smalltalk
+what can you help me with,smalltalk
+can you help me with anything,smalltalk
+what can you do to help me,smalltalk
+what are your capabilities,smalltalk
+can you help me with anythning in particular,smalltalk
+i'm good thank you,smalltalk
+i'm good,smalltalk
+i am good thanks,smalltalk
+i'm ok thanks,smalltalk
+i am ok,smalltalk
+i'm well,smalltalk
+i'm doing ok,smalltalk
+thank you very much,smalltalk
+i'm really good thanks,smalltalk
+thanks,smalltalk
+are you alright,smalltalk
+how do you do,smalltalk
+are you ok,smalltalk
+how are you,smalltalk
+are you doing ok,smalltalk
+how's the weather,smalltalk
+what will the weather be like tomorrow,smalltalk
+what's the weather like in,smalltalk
+what's the current time,smalltalk
+what's on the clock,smalltalk
+do you know today's date,smalltalk
+will it be cold later,smalltalk
+will it be sunny today,smalltalk
+is it going to rain today,smalltalk
+will it rain later,smalltalk
+is it currently raining,smalltalk
+is it going to be wet outside,smalltalk
+how was your day,smalltalk
+what's the time,smalltalk
+what is the time,smalltalk
+what time is it,smalltalk
+what day is it,smalltalk
+what is the date today,smalltalk
+what's today's date,smalltalk
+what is the date,smalltalk
+what date is it,smalltalk
+how are you doing,smalltalk
+how's it going,smalltalk
+what is my name,smalltalk
+what am i called,smalltalk
+what do you call me,smalltalk
+what is your name,smalltalk
+how old am i,smalltalk
+can you tell me my name,smalltalk
+what's my name,smalltalk
+what's your name,smalltalk
+how old are you,smalltalk
+tell me my name,smalltalk
+what are you,smalltalk
+who are you,smalltalk
+who am i,smalltalk
+can you tell me a joke,smalltalk
+do you know any jokes,smalltalk
+what's something funny you know,smalltalk
+do you know any fun facts,smalltalk
+tell me some trivia,smalltalk
+tell me a fun fact,smalltalk
+what's your favourite joke,smalltalk
+do you have a favourite fact,smalltalk
+why don't you tell me a joke,smalltalk
+tell me something interesting,smalltalk
+tell me something,smalltalk
+i want to book tickets,transaction
+can i book tickets,transaction
+help me get concert tickets,transaction
+i want to go to a gig,transaction
+reserve concert tickets,transaction
+reserve gig tickets,transaction
+i want to get some tickets,transaction
+find me concert tickets,transaction
+how can i get tickets,transaction
+i want to see live music,transaction
+how can i see live music,transaction
+where can i see them live,transaction
+where can i get concert tickets,transaction
+can you book me tickets,transaction
+will you help me get gig tickets,transaction
+i want music tickets,transaction
+i'd like to go see some music,transaction
+i want to see them perform,transaction
+help me get tickets for this performance,transaction
+make a booking,transaction
+make a booking for a gig,transaction
+concert booking,transaction
+can you help my location concert tickets,transaction
+can you recommend me music,actionable
+what music can you recommend,actionable
+i want to find new music,actionable
+can you suggest some artists,actionable
+can you recommend some artists in the genre,actionable
+who are some good musicians,actionable
+suggest some artists i might like,actionable
+whats a good artist to listen to,actionable
+can you fine some underrated artists,actionable
+what bands will i like,actionable
+can you tell me some bands i might like,actionable
+what's a good band to listen to,actionable
+can you give me some music ideas,actionable
+what are some good bands,actionable
+do you know any good singers,actionable
+tell me some good singers,actionable
+can you find me a new band,actionable
+help me find some new music,actionable
+what music do you recommend for people that like genre,actionable
+can you point me to some fresh music,actionable
+what music recommendations can you make,actionable
+what are your best music suggestions,actionable
+do you have any good music recommendations,actionable
