@@ -21,9 +21,7 @@ class Database:
         self.connection.close()
 
     def execute(self, query, parameter=None):
-        if not parameter:
-            self.cursor.execute(query)
-        else: self.cursor.execute(query,parameter)
+        self.cursor.execute(query, parameter or ())
         self.connection.commit()
 
     def new_user(self, username):
@@ -55,20 +53,18 @@ class Database:
         if self.exists(username):
             self.execute(f'''INSERT INTO Log (username, login_date) VALUES (?, CURRENT_TIMESTAMP);''',(username,))
             name = self.get_info(username, ["firstname"])[0][0]
-            return name if name else username
-        return "Username does not exist, please create an account"
+            return username, name
+        return None, None
     
     def gen_username(self, base):
         while self.exists(base):
             characters = string.ascii_letters + string.digits
-            base += characters[rnd.randint(0,len(characters)-1)]
+            base += ''.join(rnd.choices(characters, k = rnd.randint(1,4)))
         return base
     
     def last_user(self):
         self.execute('''SELECT username FROM Log LIMIT 1''')
         username = self.cursor.fetchone()[0]
-        if username:
-            self.execute(f'''SELECT firstname FROM Users WHERE username = ?''',(username,))
-            name = self.cursor.fetchone()[0]
-            return username, name if name else None
-        return None, None
+        self.execute('''SELECT firstname FROM Users WHERE username = ?''',(username,))
+        name = self.cursor.fetchone()[0]
+        return username, name

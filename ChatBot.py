@@ -7,10 +7,11 @@ from Input import *
 from Transaction import *
 from Similarity import *
 from Api import *
+from User import *
 
 class Chatbot:
     def __init__(self):
-        self.name = "\033[1;32m<Cobain>:\033[0m"
+        self.botprompt = "\033[1;32m<Cobain>:\033[0m"
         #create database
         self.db = Database()
         #create classifiers
@@ -22,49 +23,10 @@ class Chatbot:
         self.qanda = Query('qanda')
         #create information retriever
         self.api = Api()
-        self.userprompt = self.update_userprompt()
-        #set the current user
-        self.context = None
-
-    def update_userprompt(self,update=False):
-        self.uid, self.user_name, first = self.db.set_user()
-        if update:
-            #if changing mid-chat
-            return f"\033[1;34m<{self.user_name}>: \033[0m"
-            
-        if first:
-            #first user of the system does not need to login
-            return f"\033[1;34m<{self.uid}>: \033[0m"
-
-        #otherwise login
-        return self.login()
-
-    def login(self):
-        #else remembers the previous user
-        print(f"{self.name} Am I still talking to {self.user_name if self.user_name else self.uid}?")
-        confirm = Input(input("\033[1;34mConfirm:\033[0m "))
-        if self.confirm.intent(confirm())=='yes':
-            self.db.login(self.uid)
-            print(f"{self.name} Nice to see you again!")
-        else:
-            print(f"{self.name} Have we met before?")
-            confirm = Input(input("\033[1;34mConfirm:\033[0m "))
-            if self.confirm.intent(confirm())=='yes':
-                self.uid=None
-                while not self.uid:
-                    print(f"{self.name} Please enter your unique ID.\nType \033[1;31mnew\033[22;39m to create an account.")
-                    uid = Input(input("\033[1;34muID:\033[0m "))
-                    if uid().lower()=='new':
-                        self.uid, self.user_name= self.db.new_user()
-                        print(f"{self.name} Nice to meet you!")
-                        break
-                    self.uid, self.user_name = self.db.login(uid())
-                    if self.uid:
-                        print(f"{self.name} Nice to see you again{' '+self.user_name if self.user_name else ''}!")
-            else:
-                self.uid, self.user_name= self.db.new_user()
-                print(f"{self.name} Nice to meet you!")
-        return f"\033[1;34m<{self.user_name if self.user_name else self.uid}>: \033[0m"
+        # login user
+        user = User()
+        user.login()
+        self.userprompt = f"\033[1;34m<{user.name if user.name else user.username}>: \033[0m"
 
     def retrain(self):
         self.intent.train()
@@ -77,7 +39,7 @@ class Chatbot:
         try:
             #opening prompt
             print(f'''\n\033[3mType \033[1;31mexit\033[22;39m to leave the chat at any time.\n\033[0m''')
-            print(f"{self.name} My name is Cobain, your concert booking AI assisant. How can I help you today?")
+            print(f"{self.botprompt} My name is Cobain, your concert booking AI assisant. How can I help you today?")
             user_input = Input(input(self.userprompt))
             while True:
                 #main loop
