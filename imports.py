@@ -1,4 +1,4 @@
-import json, ijson, sqlite3, joblib, string, os, re, nltk
+import json, ijson, sqlite3, joblib, string, os, re, nltk, spacy
 import pandas as pd, random as rnd, numpy as np
 from datetime import datetime, timedelta
 from dateutil import parser
@@ -11,3 +11,5 @@ from nltk.corpus import stopwords, wordnet
 from nltk.tokenize import word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 from collections import deque, namedtuple
+
+nlp = spacy.load("en_core_web_sm")

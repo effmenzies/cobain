@@ -21,8 +21,11 @@ class User:
         # identify previous user
         self.username, self.name = self.db.last_user()
 
-        #set the current user
-        self.context = None
+        # prompt
+        self.prompts = Input()
+
+    def prompt(self, text):
+        self.prompts.process(text)
 
     def output(self, message):
         print(f"{self.bot.botprompt} {message}")
@@ -58,16 +61,15 @@ class User:
                         response = input("Confirm: ")
                         if self.confirm.intent(response) == 'yes':
                             break
-            else:
-                self.output("Let's create an account for you. What would you like your username to be?")
+            self.output("Let's create an account for you. What would you like your username to be?")
+            username = input("Username: ")
+            while self.db.exists(username):
+                suggestion = self.db.gen_username(username)
+                self.output(f"That username is taken, please choose another.\nExample: {suggestion}")
                 username = input("Username: ")
-                while self.db.exists(username):
-                    suggestion = self.db.gen_username(username)
-                    self.output(f"That username is taken, please choose another.\nExample: {suggestion}")
-                    username = input("Username: ")
-                self.username, self.name = self.db.new_user(username)
-                self.output(f"Nice to meet you!")
-                return self.username, self.name
+            self.username, self.name = self.db.new_user(username)
+            self.output(f"Nice to meet you!")
+            return self.username, self.name
 
     def retrain(self):
         self.intent.train()

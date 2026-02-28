@@ -12,21 +12,28 @@ from User import *
 class Chatbot:
     def __init__(self):
         self.botprompt = "\033[1;32m<Cobain>:\033[0m"
-        #create database
+        # connect to database
         self.db = Database()
-        #create classifiers
+
+        # create classifiers
         self.intent = Classifier('intent')
         self.confirm = Classifier('confirm', analyzer='char_wb', ngram=(2,4))#single words, word-based analyzer not as robust
         self.smalltalk = Classifier('smalltalk')
+
         #create DTMs
         self.responses = Similarity('responses')
         self.qanda = Query('qanda')
+
         #create information retriever
         self.api = Api()
+
         # login user
-        user = User()
-        user.login()
-        self.userprompt = f"\033[1;34m<{user.name if user.name else user.username}>: \033[0m"
+        self.user = User(self)
+        self.user.login()
+        self.update_userprompt()
+
+    def update_userprompt(self):
+        self.userprompt = f"\033[1;34m<{self.user.name if self.user.name else self.user.username}>: \033[0m"
 
     def retrain(self):
         self.intent.train()
@@ -40,7 +47,7 @@ class Chatbot:
             #opening prompt
             print(f'''\n\033[3mType \033[1;31mexit\033[22;39m to leave the chat at any time.\n\033[0m''')
             print(f"{self.botprompt} My name is Cobain, your concert booking AI assisant. How can I help you today?")
-            user_input = Input(input(self.userprompt))
+            user_input = self.user.prompt(input(self.userprompt))
             while True:
                 #main loop
                 output=''#clear output
